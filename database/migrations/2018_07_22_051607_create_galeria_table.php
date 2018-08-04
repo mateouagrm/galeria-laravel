@@ -19,7 +19,7 @@ class CreateGaleriaTable extends Migration
              $table->integer('id_usuario')->unsigned();
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->integer('id_album')->unsigned();
+            $table->integer('id_album')->unsigned()->nullable();
             $table->foreign('id_album')->references('id')->on('album')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
