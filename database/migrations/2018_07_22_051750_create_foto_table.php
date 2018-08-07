@@ -16,6 +16,8 @@ class CreateFotoTable extends Migration
         Schema::create('foto', function (Blueprint $table) {
             $table->increments('id');
             $table->string('imagen');
+            $table->integer('id_album')->unsigned()->nullable();
+            $table->foreign('id_album')->references('id')->on('album')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

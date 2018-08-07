@@ -14,5 +14,5 @@ class Galeria extends Model
     public $timestamps=false;
 
     protected $fillable=[
-         'nombre','id_usuario','id_album' ] ;
+         'nombre','id_usuario' ] ;
 }

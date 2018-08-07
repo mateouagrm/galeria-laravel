@@ -13,5 +13,5 @@ class Album extends Model
     public $timestamps=false;
 
     protected $fillable=[
-         'nombre', 'id_foto'  ];
+         'nombre', 'id_galeria'  ];
 }

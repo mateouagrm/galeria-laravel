@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/table.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -67,12 +68,23 @@
                             </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="{{url('galeria')}}">Galeria</a></li>
-                        <li class="dropdown"><a href="#"  data-toggle="dropdown">menu <span class="caret"></span></a>
+                         <li class="dropdown"><a href="#"  data-toggle="dropdown">Galeria <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">item1</a></li>
-                                <li><a href="#">item2</a></li>
-                                <li><a href="#">item3</a></li>
+                                <li><a href="{{url('galeria')}}">Todas las Galerias</a></li>
+                                <li><a href="{{url('album')}}">Mi Galeria</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#"  data-toggle="dropdown">Album <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{url('album_create')}}">Crear Album</a></li>
+                                <li><a href="{{url('album')}}">Mis Albums</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#"  data-toggle="dropdown">Fotos<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{url('upload_photo')}}">Subir Foto</a></li>
+                                <li><a href="#">Ver Todas las Fotos</a></li>
+                                <li><a href="#">Ver Mis Fotos</a></li>
                             </ul>
                         </li>
                     </ul>                   

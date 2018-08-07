@@ -13,7 +13,7 @@ class Foto extends Model
     public $timestamps=false;
 
     protected $fillable=[
-         'imagen'  
+         'imagen','id_album'  
     ];
 
     protected $guarded=[

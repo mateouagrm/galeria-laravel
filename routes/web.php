@@ -15,6 +15,7 @@ Route::get('/para/{nombre}/{edad}','pruebaController@parametro');
 
 //galeria
 Route::get('/galeria','galeriaController@listarGaleria'); 
+Route::get('/galeria/{id}','galeriaController@galeria');
 
 //login
 Route::get('/login','Auth\AuthController@getLogin'); 
@@ -28,6 +29,16 @@ Route::post('/register','Auth\AuthController@postRegister');
 Route::get('/logout','Auth\AuthController@getLogout');
 Route::post('/logout','Auth\AuthController@getLogout');
 
+
+//Album
+Route::get('/album','albumController@listaAlbum'); 
+Route::get('/album_create','albumController@create'); 
+Route::post('/album_store','albumController@store'); 
+Route::get('/galeria/{id}','galeriaController@galeria');
+
+//Foto
+Route::get('/upload_photo','fotoController@upload_photo'); 
+Route::post('/photo_store','fotoController@photo_store'); 
 
 //Route::get('/', ['as' => 'auth/login', 'uses' => 'Auth\AuthController@getLogin']);   
 //Route::post('login', ['as' =>'login', 'uses' => 'Auth\AuthController@postLogin']);   
